@@ -1,0 +1,157 @@
+/*
+File: style.css
+GUI Assignment: Creating A Dynamic Multiplication Table with jQuery Validation plugin
+Nancy Vi, UMass Lowell Computer Science, Nancy_Vi@student.uml.edu
+Copyright (c) 2025 by Nancy. All rights reserved.
+Description: This is the css file for assignment 4 - Part 2. Contains the style/formatting
+specifics for elements in index.html
+Updated by NV on November 26, 2025 at 11:59 PM
+*/
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #fff3e2;
+}
+
+h1 {
+    text-align: center; 
+}
+
+/*Input styling */
+#table-form {
+    max-width: 900px;
+    margin-bottom: 20px;
+    padding: 15px;
+    margin: 0 auto 20px auto;
+}
+
+#table-form legend {
+    padding: 0 0 20px;
+    font-weight: bold;
+}
+
+.slider-control {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 8px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 150px; 
+}
+
+.horizontal-inputs {
+    align-items: flex-start;
+}
+
+/*Tabs and Live Table styling */
+#tabs {
+    margin: 20px auto;
+    max-width: 1000px; 
+}
+
+#live-table-container {
+    padding: 10px;
+    min-height: 100px;
+    border: 1px solid #dad7d7;
+    background-color: #ffffff;
+}
+
+.table-container-wrapper {
+    max-height: 400px; 
+    overflow: auto; 
+}
+
+#tab-management {
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/*Input and button styling */
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dad7d7;
+}
+
+button {
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*Validation styling */
+label.error {
+    color: #ff0000;
+    font-size: 0.9em;
+    font-weight: normal;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 2px solid #ff0000;
+    background-color: #ffe6e6;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Table styling */
+.multi_table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.multi_table th, .multi_table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dad7d7;
+}
+
+.multi_table thead th {
+    background-color: #1c3253;
+    color: white;
+}
+
+.multi_table thead th {
+    position: sticky;
+    top: 0;
+}
+
+.multi_table tbody tr th:first-child {
+    background-color: #1c3253;
+    color: white;
+}
+
+.multi_table th:first-child:nth-child(1) {
+    background-color: #1c3253;
+    z-index: 2; 
+}
+
+.multi_table td {
+    background-color: #ffffff;
+}
+.multi_table tbody tr:nth-child(even) td {
+    background-color: #d5ebff;
+}

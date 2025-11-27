@@ -1,0 +1,84 @@
+<!--
+File: index.html
+GUI Assignment: Creating A Dynamic Multiplication Table with jQuery Validation plugin
+Nancy Vi, UMass Lowell Computer Science, Nancy_Vi@student.uml.edu
+Copyright (c) 2025 by Nancy. All rights reserved.
+
+Description: This is the html file for assignment 4 - Part 2, it contains the structures to make an interactive multiplication table.
+The resulting output creates a multiplication form where users can enter integer values that can be validated and used to make
+a multiplication table in a scrollable container. Purpose of the assignment is to make an interactive website that combines the
+all the languages learned thus far (html, css, and js).
+Updated by NV on November 26, 2025 at 11:59 PM
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table Generator</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>DYNAMIC MULTIPLICATION TABLE</h1>
+
+    <form id="table-form">
+        <legend>Please enter the table ranges (values must be between -50 to 50):</legend>
+
+        <div class="horizontal-inputs"> 
+            <div class="input-group">
+                <label for="min_col">Minimum Column Value:</label>
+                <input type="text" id="min_col" name="min_col" required>
+                <div id="slider-min_col" class="slider-control"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="max_col">Maximum Column Value:</label>
+                <input type="text" id="max_col" name="max_col" required>
+                <div id="slider-max_col" class="slider-control"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="min_row">Minimum Row Value:</label>
+                <input type="text" id="min_row" name="min_row" required>
+                <div id="slider-min_row" class="slider-control"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="max_row">Maximum Row Value:</label>
+                <input type="text" id="max_row" name="max_row" required>
+                <div id="slider-max_row" class="slider-control"></div>
+            </div>
+        </div>
+
+        <button type="submit" id="save-table-button">Save Table</button>
+    </form>
+
+    <hr>
+    <div id="live-table-container" class="table-container-wrapper">
+        <p>Enter parameters above and use the sliders/inputs to dynamically generate a table here.</p>
+    </div>
+
+    <hr>
+
+    <h2>Saved Tables</h2>
+    <div id="tab-management">
+        <button id="delete-current-tab">Delete Current Tab</button>
+        <button id="delete-all-tables">Delete All Tables</button>
+    </div>
+
+    <div id="tabs">
+        <ul>
+        </ul>
+    </div>
+    
+    <!--CDN links for jQuery, the Validation Plugin, and jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
